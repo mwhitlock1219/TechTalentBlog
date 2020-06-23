@@ -8,9 +8,9 @@ import javax.persistence.Id;
 @Entity
 public class BlogPost {
 
-    @Id // this will be the primary key
+    @Id
 
-    @GeneratedValue(strategy = GenerationType.AUTO) // generate id value automatically
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String title, author, blogEntry;

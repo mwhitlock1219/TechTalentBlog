@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://wwww.thymeleaf.org">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog Site</title>
+  <title>Zach's Blog Site</title>
 
   <link rel="stylesheet" href="webjars/bootstrap/4.5.0/css/bootstrap.min.css" />
 </head>
@@ -14,7 +14,8 @@
     <div class="row">
       <h1>Welcome to my Blog Site!</h1>
       <h3>Check out our blogs!</h3>
-      <div th:each="blog:${post}">
+
+      <div th:each="blog:${posts}">
         <div class="col-sm">
           <div class="card">
             <div class="card-body">
@@ -24,23 +25,13 @@
             </div>
             <div class="card-footer"></div>
           </div><!-- End of .card -->
-        </div> <!-- End of .col-sm -->
-      </div> <!-- End of posts loop -->
-    </div>
-    <div class="row">
-      <p>Use the form below to submit a blog post:</p>
-      <form action="#" th:action="@{/}" th:object="${blogPost}" method="POST">
-        <label for="blogTitle">Title: </label>
-        <input type="text" name="blogTitle" th:field="*{title}" />
+        </div><!-- End of .col-sm -->
+      </div><!-- End of posts loop -->
 
-        <label for="blogAuthor">Author: </label>
-        <input type="text" name="blogAuthor" th:field="*{author}" />
+      <a href="/blogposts/new">
+        <button class="btn btn-primary">Submit A New Blog Post</button>
+      </a>
 
-        <label for="blogEntry">Blog Entry: </label>
-        <input type="text" name="blogEntry" th:field="*{blogEntry}" />
-
-        <button type="submit">Submit Your Blog</button>
-      </form>
     </div>
   </div>
 
