@@ -7,13 +7,16 @@ import javax.persistence.Id;
 
 @Entity
 public class BlogPost {
+
     @Id // this will be the primary key
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
+    @GeneratedValue(strategy = GenerationType.AUTO) // generate id value automatically
     private Long id;
+
     private String title, author, blogEntry;
 
-    public BlogPost(){
-        //non-argument constructor for JPA
+    public BlogPost() {
+        // non-argument constructor for JPA
     }
 
     public BlogPost(String title, String author, String blogEntry) {
