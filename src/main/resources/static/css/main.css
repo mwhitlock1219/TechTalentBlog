@@ -33,12 +33,16 @@ span {
 /*START Navbar*/
 .navbar li a:hover, .dropdown:hover .dropbtn {
     background-color: rgb(110, 110, 110);
-    color: white;
+    color: #ffccff;
  }
+
+ #color {
+    color: lightseagreen;
+}
+
  /*END Navbar*/
 
 .pageheader {
-    background-color: lightseagreen;
     color: black;
     text-align: center;
     padding: 25px;
@@ -58,9 +62,7 @@ span {
 background-color: #ffccff;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 border: 1px solid lightseagreen;
+margin: 10px;
 }
 
-.card-title{
-   text-shadow: 0 0 3px lightseagreen;
-   color:white; 
-}
+
