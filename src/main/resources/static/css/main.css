@@ -1,0 +1,66 @@
+html {
+    background-color: #eee;
+    padding: 0.5em 1em;
+}
+
+h1,h2,h3,h4 {
+    display: block;
+}
+
+label {
+    display: inline-block;
+    width: 200px;
+    margin: 5px;
+    text-align: left;
+}
+
+input[type=text]{
+    display: inline-block;
+    width: 200px;
+}
+
+.center{
+    text-align: center;
+}
+
+span {
+    display: inline-block;
+    width: 200px;
+    margin: 5px;
+    text-align: center;
+}
+
+/*START Navbar*/
+.navbar li a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(110, 110, 110);
+    color: white;
+ }
+ /*END Navbar*/
+
+.pageheader {
+    background-color: lightseagreen;
+    color: black;
+    text-align: center;
+    padding: 25px;
+}
+
+.row {
+    text-align: center; 
+    padding: 15px;
+}
+
+.fancy1 h1{
+	font-family: 'Liu Jian Mao Cao', cursive;
+	font-size: 85px;
+}
+
+.card {
+background-color: #ffccff;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border: 1px solid lightseagreen;
+}
+
+.card-title{
+   text-shadow: 0 0 3px lightseagreen;
+   color:white; 
+}
