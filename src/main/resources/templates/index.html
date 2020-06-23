@@ -1,56 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://wwww.thymeleaf.org">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Site</title>
 
-    <link
-      rel="stylesheet"
-      href="webjars/bootstrap/4.5.0/css/bootstrap.min.css"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Site</title>
 
-  <body>
-    <div class="container">
-      <div class="row">
-        <h1>Welcome to my Blog Site!</h1>
-        <h3>Check out our blogs!</h3>
-        <div th:each="blog:${post}">
-          <div class="col-sm">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title" th:text="${blog.title}"></h5>
-                <p th:text="${blog.author}"></p>
-                <p th:text="${blog.blogEntry}"></p>
-              </div>
-              <div class="card-footer"></div>
+  <link rel="stylesheet" href="webjars/bootstrap/4.5.0/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <h1>Welcome to my Blog Site!</h1>
+      <h3>Check out our blogs!</h3>
+      <div th:each="blog:${post}">
+        <div class="col-sm">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title" th:text="${blog.title}"></h5>
+              <p th:text="${blog.author}"></p>
+              <p th:text="${blog.blogEntry}"></p>
             </div>
-            <!-- End of .card -->
-          </div>
-          <!-- End of .col-sm -->
-        </div>
-        <!-- End of posts loop -->
-      </div>
-      <div class="row">
-        <p>Use the form below to submit a blog post:</p>
-        <form action="#" th:action="@{/}" th:object="${blogPost}" method="POST">
-          <label for="blogTitle">Title: </label>
-          <input type="text" name="blogTitle" th:field="*{title}" />
-
-          <label for="blogAuthor">Author: </label>
-          <input type="text" name="blogAuthor" th:field="*{author}" />
-
-          <label for="blogEntry">Blog Entry: </label>
-          <input type="text" name="blogEntry" th:field="*{blogEntry}" />
-
-          <button type="submit">Submit Your Blog</button>
-        </form>
-      </div>
+            <div class="card-footer"></div>
+          </div><!-- End of .card -->
+        </div> <!-- End of .col-sm -->
+      </div> <!-- End of posts loop -->
     </div>
+    <div class="row">
+      <p>Use the form below to submit a blog post:</p>
+      <form action="#" th:action="@{/}" th:object="${blogPost}" method="POST">
+        <label for="blogTitle">Title: </label>
+        <input type="text" name="blogTitle" th:field="*{title}" />
 
-    <script src="webjars/jquery/3.5.1/jquery.min.js"></script>
-    <script src="webjars/popper.js/2.0.2/umd/popper.min.js"></script>
-    <script src="webjars/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  </body>
+        <label for="blogAuthor">Author: </label>
+        <input type="text" name="blogAuthor" th:field="*{author}" />
+
+        <label for="blogEntry">Blog Entry: </label>
+        <input type="text" name="blogEntry" th:field="*{blogEntry}" />
+
+        <button type="submit">Submit Your Blog</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="webjars/jquery/3.5.1/jquery.min.js"></script>
+  <script src="webjars/popper.js/2.0.2/umd/popper.min.js"></script>
+  <script src="webjars/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
 </html>
