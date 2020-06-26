@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melina's Blog Site</title>
+
+    <div th:replace="/fragments/styling :: head-style"></div>
+</head>
+
+<body>
+
+    <div th:replace="/fragments/navbar :: navbar"></div>
+
+    <div class="center">
+        <span>Use the form below to submit a blog post:</span>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="card-body">
+                <h5 class="card-title">Blog Post</h5>
+                <form action="#" th:action="@{~/blogposts/update/{id}(id=${blogPost.id})}" th:object="${blogPost}"
+                    method="POST">
+                    <label for="blogTitle">Title:</label>
+                    <input type="text" name="blogTitle" th:field="*{title}" />
+                    <br />
+                    <label for="blogAuthor">Author:</label>
+                    <input type="text" name="blogAuthor" th:field="*{author}" />
+                    <br />
+                    <label for="blogEntry">Blog Entry:</label>
+                    <input type="text" name="blogEntry" th:field="*{blogEntry}" />
+                    <br />
+
+                    <button type="submit" class="btn btn-info">Save Your Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- <footer>
+    <div class="fixed" th:replace="/fragments/navbar :: navbar"></div>
+  </footer> -->
+    <div th:replace="/fragments/styling :: body-links"></div>
+</body>
+
+</html>
