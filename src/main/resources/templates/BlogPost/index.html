@@ -21,18 +21,35 @@
   </div>
   <div class="container">
     <div class="row">
-      <div th:each="blog:${posts}">
-        <div class="col-sm">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title" th:text="${blog.title}"></h5>
-              <p th:text="${blog.author}"></p>
-              <p th:text="${blog.blogEntry}"></p>
-            </div>
-            <div class="card-footer"></div>
-          </div><!-- End of .card -->
-        </div><!-- End of .col-sm -->
-      </div><!-- End of posts loop -->
+      <div class="col-xl-3">
+        <div class="card">
+          <div class="card-body">
+            <img
+              src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/100103800_10213192432605517_1371325122798944256_n.jpg?_nc_cat=110&_nc_sid=8bfeb9&_nc_ohc=_cJTbKTtQaAAX8CVJ-C&_nc_ht=scontent-iad3-1.xx&oh=8e4f498b36dea7630bd2a8f1aff8e0ed&oe=5F18F3F6"
+              class="rounded-circle" alt="Image of Melina Whitlock">
+            <h2 class="card-title">Blog Writer</h2>
+            <h5>Melina Aleojs Whitlock</h5>
+            <br />
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium facere deserunt sunt? Ab quis
+              repudiandae sed accusantium, odit dolorum id officia modi sit dolores cum cumque sapiente nostrum ea quae!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-9">
+        <div th:each="blog:${posts}">
+          <div class="col-sm">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" th:text="${blog.title}"></h5>
+                <p th:text="${blog.author}"></p>
+                <p th:text="${blog.blogEntry}"></p>
+              </div>
+              <div class="card-footer"></div>
+            </div><!-- End of .card -->
+          </div><!-- End of .col-sm -->
+        </div><!-- End of posts loop -->
+      </div>
     </div>
     <div class="row">
       <div class="col-xl">
@@ -42,9 +59,9 @@
       </div>
     </div>
   </div>
-  <!-- <footer>
-    <div th:replace="/fragments/navbar :: navbar"></div>
-  </footer> -->
+  <footer>
+    <div class="fixed" th:replace="/fragments/navbar :: navbar"></div>
+  </footer>
 
   <script src="webjars/jquery/3.5.1/jquery.min.js"></script>
   <script src="webjars/popper.js/2.0.2/umd/popper.min.js"></script>

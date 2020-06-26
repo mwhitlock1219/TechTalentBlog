@@ -48,6 +48,9 @@ span {
     padding: 25px;
 }
 
+/* .container{
+    height: 400px;
+} */
 .row {
     text-align: center; 
     padding: 15px;
@@ -57,12 +60,26 @@ span {
 	font-family: 'Liu Jian Mao Cao', cursive;
 	font-size: 85px;
 }
-
-.card {
-background-color: #ffccff;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-border: 1px solid lightseagreen;
-margin: 10px;
+img{
+    height: 200px;
+    width: 150px;
 }
 
+.card {
+background-color: #ffccff; 
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+border: 1px solid lightseagreen; 
+margin: 10px;
+/* border: 1px black;
+box-shadow: 0 2px 4px 0 white; */
+}
 
+/* .background {
+    background-image: url(https://images.unsplash.com/photo-1502847427791-d0194ec4cff4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1190&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.fixed {
+    position: fixed;
+}
